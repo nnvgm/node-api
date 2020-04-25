@@ -1,0 +1,12 @@
+FROM node:12.16.2-alpine
+
+WORKDIR /app
+
+COPY . .
+
+RUN yarn
+RUN yarn build
+
+EXPOSE 5000
+
+CMD ["yarn", "start"]
